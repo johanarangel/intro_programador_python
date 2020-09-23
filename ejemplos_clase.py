@@ -3,21 +3,20 @@
 Listas [Python]
 Ejemplos de clase
 ---------------------------
-Autor: Inove Coding School
+Autor: Johana Rangel
 Version: 1.1
 
 Descripcion:
 Programa creado para mostrar ejemplos prácticos de los visto durante la clase
 '''
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
+__author__ = "Johana Rangel"
+__email__ = "johanarang@hotmail.com"
 __version__ = "1.1"
 
-import math
-
-# import numpy as np
-# import matplotlib.pyplot as plt
+import math 
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def practica_listas():
@@ -27,6 +26,8 @@ def practica_listas():
     # crear utilizando range
 
     lista1 = []  # Lista vacia
+    for numero in range(-10, 11):
+        lista1.append(numero)
 
     # Crear una lista de rango -10 a 10 inclusive
 
@@ -38,6 +39,9 @@ def practica_listas():
     lista2 = []  # Lista vacia
     # Crear una lista de rango -10 a 10 inclusive de 
     # solo nùmeros pares
+    for numero in range(-10, 10):
+        if numero % 2 == 0:
+            lista2.append(numero)
 
     print('2:', lista2)
 
@@ -46,6 +50,9 @@ def practica_listas():
 
     lista3 = []  # Lista vacia
     # Filtrar numeros positivos
+    for numero in lista1:
+        if numero > 0:
+            lista3.append(numero)
 
     print('3:', lista3)
 
@@ -54,6 +61,9 @@ def practica_listas():
 
     lista4 = []  # Lista vacia
     # Filtrar numeros mayores a 3
+    for numero in lista1:
+        if numero > 3:
+            lista4.append(numero)
 
     print('4:', lista4)
 
@@ -61,6 +71,8 @@ def practica_listas():
 
     suma_total = 0
     # Sumar numeros
+    for numero in lista1:
+        suma_total = sum(lista1)
 
     print('5:', suma_total)
 
@@ -69,6 +81,8 @@ def practica_listas():
 
     lista6 = []  # Lista vacia
     # Aplicar mdulo
+    for numero in lista1:
+        lista6.append(abs(numero))
 
     print('6:', lista6)
 
@@ -79,6 +93,10 @@ def practica_listas():
     lista7 = []  # Lista vacia
     # Sumar listas
 
+    for i in range(len(lista1)):
+        suma = lista1[i] + lista6[i]
+        lista7.append(suma)
+
     print('7:', lista1)
     print('7:', lista6)
     print('7:', lista7)
@@ -88,22 +106,27 @@ def practica_listas():
     lista8 = []  # Lista vacia
     # Elevar al cuadrado
 
+    for numero in lista1:
+        cuadrado = numero ** 2
+        lista8.append(cuadrado)
+
     print('8:', lista8)
 
     # 9) Crear una lista "x" cuyo rango esté comprendido
     # entre 0 y 4pi, que tenga 40 elementos
     # Calcular la función seno de x
-    # x = np.linspace(0, 4*math.pi, 40)
+    
+    x = np.linspace(0, 4*math.pi, 40)
 
-    # lista9 = []  # Lista vacia
-    # # Elevar al cuadrado
-    # for n in x:
-    #     lista9.append(math.sin(n))
+    lista9 = []  # Lista vacia
+    # Elevar al cuadrado
+    for n in x:
+        lista9.append(math.sin(n))
 
-
-    # plt.plot(x, lista9, c='darkblue')
-    # plt.grid(ls='dashed')
-    # plt.show()
+                
+    plt.plot(x, lista9, c='darkblue')
+    plt.grid(ls='dashed')
+    plt.show()
 
 
 if __name__ == '__main__':

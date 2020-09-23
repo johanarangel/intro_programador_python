@@ -16,8 +16,8 @@ __version__ = "1.1"
 
 import math
 
-# import numpy as np
-# import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def practica_listas():
@@ -115,15 +115,15 @@ def practica_listas():
     # Calcular la función seno de x
     # x = np.linspace(0, 4*math.pi, 40)
 
-    # lista9 = []  # Lista vacia
+    lista9 = []  # Lista vacia
     # # Elevar al cuadrado
-    # for n in x:
-    #     lista9.append(math.sin(n))
+    for n in x:
+        lista9.append(math.sin(n))
 
 
-    # plt.plot(x, lista9, c='darkblue')
-    # plt.grid(ls='dashed')
-    # plt.show()
+    plt.plot(x, lista9, c='darkblue')
+    plt.grid(ls='dashed')
+    plt.show()
 
 
 if __name__ == '__main__':

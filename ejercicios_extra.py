@@ -3,7 +3,7 @@
 Listas [Python]
 Ejercicios de clase
 ---------------------------
-Autor: Inove Coding School
+Autor: Johana Rangel
 Version: 1.2
 
 Descripcion:
@@ -11,8 +11,8 @@ Programa creado para poner a prueba los conocimientos
 adquiridos durante la clase
 '''
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
+__author__ = "Johana Rangel"
+__email__ = "johanarang@hotmail.com"
 __version__ = "1.2"
 
 import math
@@ -28,6 +28,9 @@ def practica_listas():
 
     # Crear una lista de rango -5 a 5 inclusive
 
+    for numero in range(-5, 6):
+        lista1.append(numero)
+
     print('1:', lista1)
 
     # 2) Crear una lista que contengo unicamente los nùmeros
@@ -37,6 +40,10 @@ def practica_listas():
     # Crear una lista de rango -5 a 5 inclusive de 
     # solo nùmeros impares
 
+    for numero in range(-5, 6):
+        if (numero % 2 != 0):
+            lista2.append(numero)
+
     print('2:', lista2)
 
     # 3) De la lista1 filtrar los números negativos, es decir,
@@ -44,6 +51,9 @@ def practica_listas():
 
     lista3 = []  # Lista vacia
     # Filtrar numeros negativos
+    for numero in lista1:
+        if numero < 0:
+            lista3.append(numero)
 
 
     print('3:', lista3)
@@ -54,7 +64,7 @@ def practica_listas():
     lista4 = []  # Lista vacia
     # Filtrar numeros mayores a 2
     for n in lista1:
-        if n > 3:
+        if n > 2:
             lista4.append(n)
 
     print('4:', lista4)
@@ -63,6 +73,8 @@ def practica_listas():
 
     suma_total = 0
     # Sumar numeros
+    for numero in lista1:
+        suma_total = sum(lista1)
 
     print('5:', suma_total)
 
@@ -71,6 +83,9 @@ def practica_listas():
 
     lista6 = []  # Lista vacia
     # Aplicar mdulo
+
+    for numero in lista1:
+        lista6.append(abs(numero))
 
     print('6:', lista6)
 
@@ -81,6 +96,10 @@ def practica_listas():
     lista7 = []  # Lista vacia
     # Sumar listas
 
+    for i in range(len(lista1)):
+        suma = lista1[i] + lista1[i]
+        lista7.append(suma)
+        
     print('7:', lista1)
     print('7:', lista6)
     print('7:', lista7)
@@ -89,7 +108,9 @@ def practica_listas():
 
     lista8 = []  # Lista vacia
     # Multiplicar por dos
-
+    for numero in lista1:
+        lista8.append(numero * 2) #DECIA MULTIPLICAR POR DOS, NO ELEVAR A LA DOS.
+    
     print('8:', lista8)
 
 

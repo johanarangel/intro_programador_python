@@ -75,6 +75,10 @@ def practica_listas():
     # Sumar numeros
     for numero in lista1:
         suma_total = sum(lista1)
+        
+    # Inove: En este caso la función "sum" ya realiza la suma de todos los números dentro de una lista
+    # En caso de utilizar "sum" alcanza con la siguiente línea de código:
+    # suma_total = sum(lista1)
 
     print('5:', suma_total)
 
@@ -98,6 +102,7 @@ def practica_listas():
 
     for i in range(len(lista1)):
         suma = lista1[i] + lista1[i]
+        # Inove: Ojo que en esta operacin se está sumando dos veces lista1 en vez de lista6
         lista7.append(suma)
         
     print('7:', lista1)

@@ -73,8 +73,8 @@ def practica_listas():
 
     suma_total = 0
     # Sumar numeros
-    for numero in lista1:
-        suma_total = sum(lista1)
+    
+    suma_total = sum(lista1)
 
     print('5:', suma_total)
 
@@ -97,7 +97,7 @@ def practica_listas():
     # Sumar listas
 
     for i in range(len(lista1)):
-        suma = lista1[i] + lista1[i]
+        suma = lista1[i] + lista6[i]
         lista7.append(suma)
         
     print('7:', lista1)
